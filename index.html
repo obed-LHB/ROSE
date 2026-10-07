@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff5f7">
+  <meta name="description" content="Une petite surprise préparée juste pour toi.">
+  <title>Juste pour toi ❤️</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <main class="app-shell">
+    <section class="screen intro-screen is-active" id="introScreen" aria-labelledby="introTitle">
+      <div class="intro-sparkle" aria-hidden="true">✦</div>
+      <div class="intro-heart" aria-hidden="true">♡</div>
+      <p class="eyebrow">Une petite attention rien que pour toi</p>
+      <h1 id="introTitle">Juste pour<br><span>toi</span> <span class="title-heart">❤️</span></h1>
+      <p class="intro-copy">J’ai préparé quelque chose de très simple…<br>mais tu dois jouer le jeu jusqu’au bout. 😌</p>
+      <button class="button button-primary start-button" id="startButton" type="button">
+        <span>💗</span> Commencer <span class="button-arrow" aria-hidden="true">→</span>
+      </button>
+      <p class="tiny-note">Promis, c’est rapide. Enfin… normalement. 👀</p>
+      <div class="intro-bottom" aria-hidden="true"><span>✦</span> préparé avec un peu trop de soin <span>✦</span></div>
+    </section>
+
+    <section class="screen generator-screen" id="generatorScreen" aria-labelledby="generatorTitle" aria-hidden="true" inert>
+      <header class="topline"><span class="brand-mark" aria-hidden="true">✿</span><span>une surprise en plusieurs étapes</span><span class="step-indicator">01 <i>/ 03</i></span></header>
+      <div class="generator-wrap">
+        <div class="section-kicker"><span>✦</span> GÉNÉRATEUR SPÉCIAL</div>
+        <h2 id="generatorTitle">Besoin d’un petit<br>compliment ? <span>👀</span></h2>
+        <p class="section-intro">J’ai quelques idées… et visiblement du temps à perdre. 😌</p>
+        <article class="compliment-card" aria-live="polite" aria-atomic="true">
+          <span class="quote-mark" aria-hidden="true">“</span>
+          <p id="complimentText">Clique sur le bouton… je vais essayer de trouver quelque chose. 😌</p>
+          <span class="card-sparkle" aria-hidden="true">✧</span>
+        </article>
+        <button class="button button-primary compliment-button" id="complimentButton" type="button">
+          <span aria-hidden="true">✨</span> Dis-moi quelque chose
+        </button>
+        <p class="count-label">Compliments reçus <span>❤️</span></p>
+        <p class="count-number" id="complimentCount" aria-live="polite">0</p>
+        <p class="count-reaction" id="countReaction" aria-live="polite"></p>
+        <aside class="tease-card is-hidden" id="teaseCard" aria-hidden="true">
+          <div class="tease-icon" aria-hidden="true">😏</div>
+          <div><p>Tu veux vraiment continuer ?</p><span>J’espère que tu as encore un peu de temps… 😂</span></div>
+          <button class="button button-small" id="continueButton" type="button">Évidemment 😂</button>
+        </aside>
+        <div class="unlock-area is-hidden" id="unlockArea" aria-hidden="true">
+          <div class="unlock-divider"><span>✦</span><span>bon, tu l’as bien mérité</span><span>✦</span></div>
+          <div class="unlock-card">
+            <span class="unlock-emoji" aria-hidden="true">👀</span>
+            <h3>Tu es arrivée jusqu’ici…</h3>
+            <p>Bon, je crois que tu as suffisamment reçu de compliments pour aujourd’hui. 😂❤️</p>
+            <button class="button button-surprise" id="surpriseButton" type="button">✨ Clique si t’as fini ✨</button>
+          </div>
+        </div>
+      </div>
+      <footer class="page-foot">Fait avec le sourire <span>♡</span></footer>
+    </section>
+
+    <section class="screen surprise-screen" id="surpriseScreen" aria-labelledby="surpriseTitle" aria-hidden="true" inert>
+      <div class="mystery-stage" id="mysteryStage">
+        <div class="mystery-orb" aria-hidden="true">✦</div>
+        <p class="mystery-line" id="mysteryLine" aria-live="polite">Attends… j’ai oublié quelque chose. 👀</p>
+      </div>
+      <div class="bouquet-content" id="bouquetContent">
+        <div class="surprise-heading">
+          <p class="section-kicker"><span>✦</span> UNE PETITE ATTENTION</p>
+          <h2 id="surpriseTitle">🌹 Pour toi</h2>
+          <p class="bouquet-caption">Un bouquet, rien que pour toi.</p>
+        </div>
+        <div class="bouquet-scene" id="bouquetScene" aria-label="Bouquet interactif de roses roses">
+          <div class="bouquet-glow" aria-hidden="true"></div>
+          <div class="bouquet-sparkles" aria-hidden="true"><i>✦</i><i>·</i><i>✧</i><i>·</i><i>✦</i></div>
+          <svg class="bouquet-stems" viewBox="0 0 360 320" role="presentation" aria-hidden="true">
+            <defs>
+              <linearGradient id="stemGreen" x1="0" x2="1"><stop stop-color="#548365"/><stop offset=".55" stop-color="#87a97c"/><stop offset="1" stop-color="#426b56"/></linearGradient>
+              <linearGradient id="wrapGradient" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5d8df"/><stop offset=".5" stop-color="#fff1f2"/><stop offset="1" stop-color="#e8bdc9"/></linearGradient>
+            </defs>
+            <g fill="none" stroke="url(#stemGreen)" stroke-width="5" stroke-linecap="round">
+              <path d="M171 104 C174 174 158 213 177 270"/><path d="M130 93 C145 170 163 217 177 270"/><path d="M218 101 C205 171 190 223 177 270"/><path d="M91 128 C126 183 151 225 177 270"/><path d="M264 130 C223 188 197 230 177 270"/><path d="M166 128 C164 182 177 218 177 270"/><path d="M204 132 C188 186 181 225 177 270"/>
+            </g>
+            <g fill="#7fa382" stroke="#60866b" stroke-width="1.5">
+              <path d="M143 179 C111 151 95 157 105 177 C116 193 134 190 143 179Z"/><path d="M157 213 C123 191 111 201 125 218 C137 229 150 222 157 213Z"/><path d="M208 176 C231 145 249 149 241 171 C234 188 217 189 208 176Z"/><path d="M197 211 C226 189 241 199 227 216 C216 228 203 220 197 211Z"/><path d="M111 194 C82 174 72 184 86 199 C96 209 107 203 111 194Z"/><path d="M245 198 C272 174 286 184 271 201 C261 211 250 205 245 198Z"/>
+            </g>
+            <path d="M102 221 Q177 252 254 221 L224 309 Q177 327 132 307Z" fill="url(#wrapGradient)" stroke="#e9c4cf" stroke-width="2"/>
+            <path d="M102 221 Q178 253 254 221 L245 244 Q177 271 111 244Z" fill="#f7e5e9" opacity=".8"/>
+            <path d="M177 257 L177 316" stroke="#d58da1" stroke-width="4" opacity=".6"/>
+            <path d="M153 260 Q177 276 201 260 Q197 289 177 292 Q157 289 153 260Z" fill="#dc91a5"/><path d="M177 278 C160 264 151 279 177 298 C203 279 194 264 177 278Z" fill="#f8d8e0"/>
+          </svg>
+          <div class="flower-layer" id="flowerLayer"></div>
+        </div>
+        <div class="rose-hint" id="roseHint">Touche une rose… elles ont chacune un petit mot pour toi. 🌸</div>
+        <div class="rose-message" id="roseMessage" role="status" aria-live="polite"></div>
+        <div class="bouquet-message" id="bouquetMessage" aria-live="polite" aria-atomic="true"></div>
+        <div class="author-reveal is-hidden" id="authorReveal" aria-hidden="true">
+          <p id="authorIntro"></p>
+          <p class="author-name" id="authorName">— Obed <span>❤️</span></p>
+          <p id="authorOutro"></p>
+        </div>
+        <section class="whatsapp-card is-hidden" id="whatsappCard" aria-labelledby="whatsappTitle" aria-hidden="true">
+          <div class="whatsapp-envelope" aria-hidden="true">💌</div>
+          <h3 id="whatsappTitle">Alors, verdict ?</h3>
+          <p>Clique ici pour me dire si tu as souri 😏</p>
+          <button class="button whatsapp-button" id="whatsappButton" type="button"><span aria-hidden="true">📱</span> Me répondre sur WhatsApp</button>
+          <p class="privacy-note">WhatsApp s’ouvrira avec un message prêt à envoyer.<br>À toi de décider si tu l’envoies. 😊</p>
+        </section>
+        <footer class="page-foot surprise-foot">Une petite surprise, et c’est tout. <span>♡</span></footer>
+      </div>
+    </section>
+  </main>
+  <div class="heart-burst" id="heartBurst" aria-hidden="true"></div>
+  <div class="petal-layer" id="petalLayer" aria-hidden="true"></div>
+  <div class="sr-only" id="screenAnnouncement" aria-live="polite"></div>
+</body>
+</html>
